@@ -7,8 +7,9 @@
     <h1>Coding Form!</h1>
 
     <form action="http://www.example.org/subscribe.php">
-      Email
-      <br>
+      <div>
+        Email
+      </div>
       <input type="email" name="email" />
     </form>
 
@@ -24,10 +25,11 @@
     </form>
     -->
 
-    <label for="Reason">
-      Why is coding cool?
-    </label>
-    <br>
+    <div>
+      <label for="Reason">
+        Why is coding cool?
+      </label>
+    </div>
 
     <select name="choices" id="choices">
       <option value="Select an option">Select an option</option>
@@ -58,17 +60,18 @@
       Sign me up!
     </label>
 
-    <p>
+    <div>
       <label for="comments">
         Comments
       </label>
-      <br />
-      <textarea rows="10" cols="30" id="comments">
-      </textarea>
-    </p>
+    </div>
 
-    <input type="submit" value="Submit" />
+    <textarea rows="10" cols="30" id="comments">
+    </textarea>
 
+    <div>
+      <input type="submit" value="Submit" />
+    </div>
       </form>
     </body>
 </html>
