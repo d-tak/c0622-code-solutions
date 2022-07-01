@@ -26,16 +26,6 @@ img {
   width: calc(200% / 3);
 }
 
-.column-center {
-  display: flex;
-  width: calc(100% / 3);
-}
-
-.column-three {
-  display: flex;
-  width: calc(100% / 3);
-}
-
 .column-one-fourth {
   display: flex;
   flex-basis: calc(100% / 4);
