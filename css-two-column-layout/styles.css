@@ -12,17 +12,29 @@ body {
   display: flex;
 }
 
-.padding-row {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.row-wrap {
+  flex-wrap: wrap;
+}
+
+.row-padding {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
 }
 
 .column-full {
   flex-basis: 100%;
 }
 
-.column-one-half {
+.col-half {
   flex-basis: calc(100% / 2);
+}
+
+.col-fourth {
+  flex-basis: 22%;
+}
+
+.col-three-fourth {
+  flex-basis: 50%;
 }
 
 h1 {
@@ -39,8 +51,11 @@ h1 {
 }
 
 h3 {
+  padding-top: 0.8rem;
   color: #0e0e0e;
   font-size: x-small;
+  line-height: 0.85rem;
+  letter-spacing: 0.25px;
 }
 
 .subheader {
@@ -54,15 +69,6 @@ h3 {
   font-weight: 100;
 }
 
-.segment-title {
-  padding-top: 0.8rem;
-  padding-left: 0.25rem;
-  padding-right: 5.25rem;
-  color: #454545;
-  line-height: 0.85rem;
-  letter-spacing: 0.25px;
-}
-
 .caption {
   text-align: left;
   color: #454545;
@@ -71,7 +77,7 @@ h3 {
   line-height: 1.04rem;
 }
 
-.align-center {
+.button-align-center {
   margin-top: 2rem;
   text-align: center;
 }
