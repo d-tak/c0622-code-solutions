@@ -30,11 +30,11 @@ body {
 }
 
 .col-fourth {
-  flex-basis: 22%;
+  flex-basis: 25%;
 }
 
 .col-three-fourth {
-  flex-basis: 50%;
+  flex-basis: 75%;
 }
 
 h1 {
@@ -75,6 +75,7 @@ h3 {
   font-size: xx-small;
   letter-spacing: 0.25px;
   line-height: 1.04rem;
+  padding-right: 5.5rem;
 }
 
 .button-align-center {
