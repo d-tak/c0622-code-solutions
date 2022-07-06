@@ -6,11 +6,11 @@ var orderHistory = [
     shipTo: 'JS Masher',
     deliveryDate: 'Delivered August 8, 2020',
     dropStatus: null,
-    itemDescription: 'JavaScript for impatient programmers',
-    authorLastName: 'Rauschmayer',
-    authorFirstName: 'Dr. Axel',
-    returnWindowStatus: 'Return window closed on Sep 7, 2020',
-    itemCost: '$31.55'
+    itemDescription: ['JavaScript for impatient programmers'],
+    authorLastName: ['Rauschmayer'],
+    authorFirstName: ['Dr. Axel'],
+    returnWindowStatus: ['Return window closed on Sep 7, 2020'],
+    itemCost: ['$31.55']
   },
   {
     orderPlaced: 'July 19, 2020',
@@ -19,11 +19,11 @@ var orderHistory = [
     shipTo: 'JS Masher',
     deliveryDate: 'Delivered Jul 20, 2020',
     dropStatus: 'Your package was delivered. It was handed directly to a resident.',
-    itemDescription: 'The Timeless Way of Building',
-    authorLastName: 'Alexander',
-    authorFirstName: 'Christopher',
-    returnWindowStatus: 'Return window closed on Aug 19, 2020',
-    itemCost: '$41.33'
+    itemDescription: ['The Timeless Way of Building'],
+    authorLastName: ['Alexander'],
+    authorFirstName: ['Christopher'],
+    returnWindowStatus: ['Return window closed on Aug 19, 2020'],
+    itemCost: ['$41.33']
   },
   {
     orderPlaced: 'July 4, 2020',
@@ -32,11 +32,11 @@ var orderHistory = [
     shipTo: 'JS Masher',
     deliveryDate: 'Delivered Jul 7, 2020',
     dropStatus: 'Your package was delivered. It was handed directly to a resident.',
-    itemDescription: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
-    authorLastName: null,
-    authorFirstName: null,
-    returnWindowStatus: 'Return window closed on Aug 5, 2020',
-    itemCost: '$15.98'
+    itemDescription: ['Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter'],
+    authorLastName: [null],
+    authorFirstName: [null],
+    returnWindowStatus: ['Return window closed on Aug 5, 2020'],
+    itemCost: ['$15.98']
   },
   {
     orderPlaced: 'July 3, 2020',
