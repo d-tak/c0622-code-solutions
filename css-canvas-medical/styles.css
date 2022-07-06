@@ -22,7 +22,7 @@ body {
 }
 
 .navbar-header {
-  padding: 2rem 3rem 0.5rem;
+  padding: 2rem 3rem 0;
   font-size: x-small;
   align-items: right;
   display: flex;
@@ -59,10 +59,14 @@ body {
 }
 
 hr {
-  display: flex;
   color: #e7e9ec;
   border-style: solid;
   border-width: 0.1px;
+  margin-top: -0.1rem;
+}
+
+.hero-container {
+  justify-content: center;
 }
 
 .hero-image {
@@ -72,13 +76,13 @@ hr {
   height: 370px;
 }
 
-.hero-image > img {
-  height: 40%;
-}
+/* .hero-image > img {
+  height: 100%;
+} */
 
 .overlay {
   background: black;
-  opacity: 0.25;
+  opacity: 0.2;
   position: absolute;
   background-size: cover;
   height: 370px;
@@ -88,7 +92,7 @@ hr {
 .box-background {
   background-color: #fafafa;
   background-size: cover;
-  padding: 0 3.6rem 1rem;
+  padding: 0 3.6rem 0.25rem;
 }
 
 .h2-title {
