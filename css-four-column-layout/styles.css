@@ -1,0 +1,66 @@
+body {
+  font-family: Barlow, sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.background-color {
+  background-color: #f6f7f9;
+}
+
+.row {
+  display: flex;
+}
+
+.padding-row {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-fourth {
+  flex-basis: calc(100% / 4);
+}
+
+h2 {
+  font-family: barlow, sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.phone {
+  text-align: center;
+}
+
+.android {
+  width: 85%;
+}
+
+.icon {
+  text-align: center;
+}
+
+.small-icon {
+  width: 17%;
+}
+
+h3 {
+  text-align: center;
+  font-family: barlow, sans-serif;
+  font-size: smaller;
+  color: #000;
+}
+
+p {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-family: barlow, sans-serif;
+  font-size: x-small;
+  color: #000;
+}
