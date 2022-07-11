@@ -1,10 +1,9 @@
 /* exported sumAll */
+
 function sumAll(numbers) {
-  // var numberTotal = [];
-  // var currentNumber = number;
-  // while (currentNumber >= 0) {
-  //   numberList.push(currentNumber);
-  //   currentNumber--;
-  // }
-  // return numberTotal;
+  var totalNumber = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    totalNumber += numbers[i];
+  }
+  return totalNumber;
 }
