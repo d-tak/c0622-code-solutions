@@ -39,17 +39,19 @@ Every time a button is clicked - do the following:
 
     */
 
-var clicks = 0;
+var clicks = 0; // don't worry, this number gets updated!
 
-var $button = document.querySelector('.hot-button');
-var $count = document.querySelector('.click-count');
+var button = document.querySelector('.hot-button');
+var count = document.querySelector('.click-count');
 
-$button.addEventListener('click', clickCount); // why?
+button.addEventListener('click', counter);
 
-function clickCount(event) {
+function counter(event) {
   clicks++;
 
-  var color = null; // why? (because this will get updated!!!)
+  var color = 0;
+  count.textContent = 'Clicks: ' + clicks;
+  button.className = 'hot-button' + color;
 
   if (clicks < 4) {
     color = 'cold';
@@ -64,7 +66,4 @@ function clickCount(event) {
   } else {
     color = 'nuclear';
   }
-
-  $button.className = 'hot-button' + color;
-  $count.textContent = 'Clicks: ' + clicks;
 }
