@@ -17,13 +17,17 @@ var books = [
   }
 ];
 
-console.log(books);
-console.log(typeof books);
+console.log('books: ', books);
+console.log('typeof books: ', typeof books);
 
-JSON.stringify(books);
-console.log(typeof JSON.stringify(books));
+JSON.stringify('books', books);
+console.log('JSON.stringify(books)', JSON.stringify(books));
+console.log('typeof JSON.stringify(books): ', typeof JSON.stringify(books));
 
-var string = '{"numberId:":1234, "studentName":"Daniel Tak"}';
-var object = JSON.parse(string);
+var student = '{"numberId:":1234, "studentName":"Daniel Tak"}';
+console.log('student: ', student);
+console.log('typeof student: ', typeof student);
 
-console.log(typeof object);
+var studentDesc = JSON.parse(student);
+console.log('studentDesc: ', studentDesc);
+console.log('typeof studentDesc: ', typeof studentDesc);
