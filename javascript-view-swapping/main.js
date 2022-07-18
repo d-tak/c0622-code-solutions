@@ -1,20 +1,15 @@
 
-// var newVarForNow = event.target('data-view')
+// document.querySelector('.tab-container');
+// document.querySelectorAll('.tab');
+// document.querySelectorAll('.view');
 
-// for(var i = 0; i < 0 ; i++) {
-//   if ('data-view') {
-//     return .active
-//     }  else if (!==.active) {
-//       return '.hidden'
-//     }
-//     return newVarForNow
+// tabContainer.addEventListener('click', viewSwap);
+
+// function viewSwap(event) {
+//   if (event.target.matches('.tab') === false) {
 
 //   }
-// }
 
-// if(event.target.matches('.tab') {
-//   for(NodeList of '.tab') {
-//     === event.target
-//     }
-//   }
+// for (var i = 0; i < 0; i++) {
+
 // }
