@@ -1,15 +1,14 @@
-function taskList(event) {
-  if (event.type !== 'BUTTON') {
-    // what am I looking for?
-  // } else ... huh? {
-
-  }
-
-  // var target = event.target;
+var taskList = document.querySelector('.task-list');
+taskList.addEventListener('click', function (event) {
 
   console.log(event.target);
   console.log(event.target.tagName);
 
-}
-var click = document.querySelector('.task-List');
-click.addEventListener('click', taskList);
+  if (event.target.tagName === 'BUTTON') {
+
+    var taskListItem = event.target.closest('.task-list-item');
+    console.log(taskListItem);
+
+    taskListItem.remove();
+  }
+});
