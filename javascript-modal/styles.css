@@ -1,0 +1,53 @@
+.open-modal {
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #4041e6;
+  box-shadow: 2.5px 2.5px 2.5px 0 darkgrey;
+  color: white;
+  width: 9.5rem;
+  height: 2.5rem;
+  font-size: large;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0.85;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.question {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 51px 42px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.response {
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #e85252;
+  box-shadow: 2px 2px 1px 0 rgb(0 0 0 / 60%);
+  color: white;
+  width: 4.5rem;
+  height: 2rem;
+  font-size: large;
+  margin-top: 2rem;
+}
