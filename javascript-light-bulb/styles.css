@@ -6,39 +6,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 2000px;
+  width: auto;
   min-height: 100%;
-  transition: 0.5s;
 }
 
-.background-color {
+.container.on {
   background-color: #fdf9f2;
   padding: 15rem;
 }
 
-.background-color:hover {
+.container.off {
   background-color: black;
   padding: 15rem;
-  transition: 0.5s;
 }
 
-.circle {
-  position: absolute;
-  padding: 10px;
+.circle-on {
   background-color: #f7eb92;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
   box-shadow: 0 0 30px 2px rgb(0 0 0 / 20%);
-  transition: 0.5s;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
 }
 
-.circle:hover {
+.circle-off {
   background-color: #252525;
-  transition: 0.5s;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
 }
