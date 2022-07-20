@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-height: 100%;
+}
+
+.container.on {
+  background-color: #fdf9f2;
+  padding: 15rem;
+}
+
+.container.off {
+  background-color: black;
+  padding: 15rem;
+}
+
+.circle-on {
+  background-color: #f7eb92;
+  box-shadow: 0 0 30px 2px rgb(0 0 0 / 20%);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.circle-off {
+  background-color: #252525;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
+}
