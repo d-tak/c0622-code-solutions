@@ -63,6 +63,7 @@ hr {
   border-style: solid;
   border-width: 0.1px;
   margin-top: -0.1rem;
+  opacity: 0.5;
 }
 
 .hero-container {
@@ -74,25 +75,22 @@ hr {
   background-size: cover;
   width: 800px;
   height: 370px;
+  position: relative;
+  background-repeat: no-repeat;
 }
 
 /* .hero-image > img {
   height: 100%;
 } */
 
-.overlay {
-  background: black;
-  opacity: 0.2;
-  position: absolute;
-  background-size: cover;
-  height: 370px;
-  width: 800px;
-}
-
 .box-background {
   background-color: #fafafa;
   background-size: cover;
   padding: 0 3.6rem 0.25rem;
+}
+
+.hero-text {
+  position: absolute;
 }
 
 .h2-title {
@@ -234,4 +232,13 @@ h3 {
   text-decoration: none;
   color: #6e6e6e;
   padding: 0 0.3rem 0 1rem;
+}
+
+.overlay {
+  background: black;
+  opacity: 0.3;
+  position: absolute;
+  background-size: cover;
+  height: 370px;
+  width: 800px;
 }
