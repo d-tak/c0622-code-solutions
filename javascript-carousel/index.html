@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column-full">
+        <div class="row align-center space-between">
+          <i class="fa-solid fa-angle-left arrow-size"></i>
+          <div class="image-container align-center">
+            <img data-id="1" class="image" src="images/001.png">
+            <img data-id="2" class="image hidden" src="images/004.png">
+            <img data-id="3" class="image hidden" src="images/007.png">
+            <img data-id="4" class="image hidden" src="images/025.png">
+            <img data-id="5" class="image hidden" src="images/039.png">
+          </div>
+          <i class="fa-solid fa-angle-right arrow-size"></i>
+        </div>
+        <div class="row justify-center">
+          <i class="circle fa-solid fa-circle circle-focus" data-id="1"></i>
+          <i class="circle fa-regular fa-circle circle-focus" data-id="2"></i>
+          <i class="circle fa-regular fa-circle circle-focus" data-id="3"></i>
+          <i class="circle fa-regular fa-circle circle-focus" data-id="4"></i>
+          <i class="circle fa-regular fa-circle circle-focus" data-id="5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
