@@ -46,7 +46,8 @@ function arrowLeft(event) {
 function circleClick(event) {
   if (event.target.getAttribute('class') === 'fa-regular fa-cicle circle-focus') {
     for (var j = 0; j < $image.length; j++) {
-      if (event.target.getAttribute('data-id') === $image[j].getAttribute('data-id')) {
+      if (event.target.getAttribute('data-id') ===
+        $image[j].getAttribute('data-id')) {
         $image.className = 'image hidden';
         $circleFocus[j].className = 'fa-regular fa-circle circle-focus';
         $image[j].className = 'image';
