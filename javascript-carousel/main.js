@@ -26,35 +26,29 @@ function arrowRight(event) {
 }
 
 function arrowLeft(event) {
-  if (event.target.getAttribute('class') === 'fa-solid fa-angle-left arrow-size') {
-    if (i < $image.length) {
-      $image[i].className = 'image hidden';
-      $image[i - 1].className = 'image';
-      $circleFocus[i].className = 'fa-regular fa-circle circle-focus';
-      $circleFocus[i - 1].className = 'fa-solid fa-circle circle-focus';
-      i--;
-    } else if (i === $image.length - 1) {
-      $image[i].className = 'image hidden';
-      $circleFocus[i].className = 'fa-regular fa-circle circle-focus';
-      i = $image.length - 1;
-      $image[i].className = 'image';
-      $circleFocus[i].className = 'fa-solid fa-circle circle-focus';
-    }
-  }
+  // if (event.target.getAttribute('class') === 'fa-solid fa-angle-left arrow-size') {
+  //   if (i < $image.length - 4) {
+  //     $image[i].className = 'image hidden';
+  //     $image[i - 1].className = 'image';
+  //     $circleFocus[i].className = 'fa-regular fa-circle circle-focus';
+  //     $circleFocus[i - 1].className = 'fa-solid fa-circle circle-focus';
+  //     i--;
+  //   } else if (i === 0) {
+  //     $image[i].className = 'image hidden';
+  //     $circleFocus[i].className = 'fa-regular fa-circle circle-focus';
+  //     i = $image.length - 1;
+  //     $image[i].className = 'image';
+  //     $circleFocus[i].className = 'fa-solid fa-circle circle-focus';
+  //   }
+  // }
 }
 
 function circleClick(event) {
-  if (event.target.getAttribute('class') === 'fa-regular fa-cicle circle-focus') {
-    for (var j = 0; j < $image.length; j++) {
-      if (event.target.getAttribute('data-id') ===
-        $image[j].getAttribute('data-id')) {
-        $image.className = 'image hidden';
-        $circleFocus[j].className = 'fa-regular fa-circle circle-focus';
-        $image[j].className = 'image';
-        $circleFocus[j].className = 'fa-solid fa-circle circle-focus';
-      }
-    }
+  if (!(event.target.classList.contains('fa-circle'))) {
+    return;
   }
+  $circleFocus[i].className = 'fa-regular fa-circle circle-focus';
+  i = parseInt(event.target.getAttribute('data-id'));
 }
 
 setInterval(timer, 3000);
