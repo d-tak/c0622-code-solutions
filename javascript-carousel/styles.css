@@ -15,8 +15,14 @@ body {
 
 .column-full {
   width: 100%;
-  border-color: orange;
-  border-style: solid;
+}
+
+.column-fourth {
+  width: 100% / 4;
+}
+
+.column-half {
+  width: 100% / 2;
 }
 
 .justify-center {
@@ -37,6 +43,12 @@ body {
 
 .hidden {
   display: none;
+}
+
+button.arrow-left,
+button.arrow-right {
+  border: none;
+  background: none;
 }
 
 i.arrow-size {
