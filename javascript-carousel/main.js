@@ -37,3 +37,22 @@ function view() {
 }
 
 setInterval(rightClick, 3000);
+
+var circleRow = document.querySelector('.circle-row');
+var circleFocus = document.querySelector('.circle-focus');
+circleRow.addEventListener('click', circleClick);
+
+function circleClick(event) {
+  if (event.target.matches('.circle-focus') === false) {
+    return;
+  }
+  for (var i = 0; i < images.length; i++) {
+    if (event.target.getAttribute('id') === image[i].getAttribute('id')) {
+      images[i].className = '';
+      circleFocus[i].className = 'fa-solid fa-circle';
+      value = parseInt(event.target.getAttribute('id'));
+    } else {
+      circleFocus[i].className = 'fa-regular fa-circle';
+    }
+  }
+}
