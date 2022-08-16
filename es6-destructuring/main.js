@@ -5,9 +5,16 @@ const book1 = {
 };
 
 const { title, author, libraryID } = book1;
+// 1. What is being destructured?  Object properties or array elements
+// 2. Where is it being destructured from?
+// 3. What are the destructured properties or elements being assigned to?
+// READ: The title, author, and libraryID PROPERTIES are being destructured
+// FROM book 1 object
+// and they are being assigned to the const variables title, author, and libraryID
 
 console.log(`The title of the book is ${title}, the author is ${author},
 and the libary id is ${libraryID}`);
+// backtick is read template literal.
 
 const book2 = {
   title: 'Les Fleurs du mal',
@@ -16,6 +23,7 @@ const book2 = {
 };
 
 const { title: bookTitle, author: authorName, libraryID: libraryIDNumber } = book2;
+// and they are being assigned to the const variables bookTitle, authorName, and libraryIDNumber
 
 console.log(`The title of the book is ${bookTitle}, the author is ${authorName},
 and the libary id is ${libraryIDNumber}`);
@@ -49,4 +57,5 @@ console.log('book4:', book4);
 console.log('book5:', book5);
 
 const [, , , book6] = library;
+// const book6 = library[3] (this is the same as line 59)
 console.log('book6:', book6);
