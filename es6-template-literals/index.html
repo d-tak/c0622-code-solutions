@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Javascript ES6 - Template Literals</title>
 </head>
-
 <body>
   <script>
     const number = 9200;
@@ -16,6 +14,9 @@
 
     // console.log('LearningFuze:', address);
 
+
+    const lfz = `LearningFuze: ${number} ${street}`;
+    console.log('LearningFuze: ', lfz);
     const lfz = `${number} ${street}`;
     console.log('LearningFuze:', lfz);
 
@@ -28,10 +29,17 @@
     // console.log('Bio:', bio);
 
     const greeting = `My name is ${firstName} ${lastName} and I am ${age} years old.`;
+
+    console.log('Bio: ', greeting);
+
     console.log('Bio:', greeting);
+
 
     const fruit = 'apple';
     const item = 'pen';
+
+
+    const applePen = fruit + item;
 
     // const applePen = fruit + item;
 
@@ -44,10 +52,14 @@
     const apple = `I have an ${fruit}`;
     console.log(apple);
 
+
+    console.log(applePen);
+
     // console.log(applePen);
 
     const applepen = `${fruit}${item}`;
     console.log(applepen);
+
   </script>
 </body>
 
