@@ -8,17 +8,5 @@ Return the new string.
 */
 
 function firstChars(length, string) {
-  var newString = '';
-  for (var i = 0; i < string.length; i++) {
-    if (i <= length) {
-      newString = string.slice(0, length);
-    }
-  }
-  return newString;
-}
-
-/*
-function firstChars(length, string) {
   return string.slice(0, length);
 }
-*/
