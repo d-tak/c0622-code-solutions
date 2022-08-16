@@ -1,0 +1,500 @@
+   67  git status
+   68  git branch --list
+   69  git switch array-manipulation-1
+   70  git status
+   71  git add array-manipulation
+   72  git add array-manipulation-1
+   73  git commit -m "Completed array-manipulation-1 exercise. - Daniel Tak"
+   74  git switch main
+   75  git branch javascript-forms
+   76  git branch --list
+   77  git switch javascript-forms
+   78  git status
+   79  git add javascript-forms
+   80  git status
+   81  git commit -m "Completed javascript-forms exercise. - Daniel Tak"
+   82  git status
+   83  git switch main
+   84  git status
+   85  git pull origin main
+   86  git branch dom-creation
+   87  git branch --list
+   88  git switch dom-creation
+   89  git status
+   90  git add dom-creation
+   91  git commit -m "Completed dom-creation exercise. - Daniel Tak"
+   92  git switch main
+   93  git switch array-manipulations-1
+   94  git switch array-manipulation-1
+   95  git status
+   96  git add array-manipulations-1
+   97  git add array-manipulation-1
+   98  git status
+   99  git commit -m "Completed array-manipulation-1 exercise. - Daniel Tak"
+  100  git push origin array-manipulation-1
+  101  git switch main
+  102  git add css-media-queries
+  103  git git branch css-media-queries
+  104  git branch css-media-queries
+  105  git branch --list
+  106  git switch css-media-queries
+  107  git status
+  108  git add css-media-queries
+  109  git status
+  110  git commit -m "Completed css-media-queries. - Daniel Tak"
+  111  git push origin css-media-queries
+  112  git switch main
+  113  switch javascript-forms
+  114  git switch javascript-forms
+  115  git switch css-media-queries
+  116  git status
+  117  git add css-media-queries
+  118  git status
+  119  git commit -m "Completed css-media-queries exercise. - Daniel Tak"
+  120  git push origin css-media-queries
+  121  git switch main
+  122  git switch css-media-queries
+  123  git status
+  124  git add css-media-queries
+  125  git status
+  126  git commit -m "Corrected closing curly brace in at-media"
+  127  git status
+  128  git push origin css-media-queries
+  129  git switch main
+  130  git branch dom-event-delegation
+  131  git branch --list
+  132  git branch --list
+  133  git status
+  134  git branch --list
+  135  git switch dom-event-delegation
+  136  git status
+  137  git add dom-event-delegation
+  138  git status
+  139  git commit -m "Completed dom-event-delegation exercise. - Daniel Tak"
+  140  git switch main
+  141  git status
+  142  git pull origin main
+  143  git status
+  144  git branch javascript-view-swapping
+  145  git branch --list
+  146  git status
+  147  git branch --list
+  148  git status
+  149  git branch javascript-view-swapping
+  150  git branch --list
+  151  git switch javascript-view-swapping
+  152  git status
+  153  git add javascript-view-swapping
+  154  git status
+  155  git add javascript-view-swapping
+  156  git status
+  157  git commit -m "Completed javascript-view-swapping exercise. - Daniel Tak"
+  158  git switch main
+  159  git branch object-manipulation-1
+  160  git branch --list
+  161  git switch object-manipulation-1
+  162  git status
+  163  git add object-manipulation-1
+  164  git status
+  165  git commit -m "Completed object-manipulation-1 exercise. - Daniel Tak"
+  166  git push origin object-manipulation-1
+  167  git switch main
+  168  git pull origin main
+  169  git status
+  170  git status
+  171  git pull origin main
+  172  git branch dom-manipulation
+  173  git switch dom-manipulation
+  174  git status
+  175  git add dom-manipulation
+  176  git commit -m "Completed dom-manipulation exercise. - Daniel Tak"
+  177  git switch javascript-forms
+  178  git switch dom-manipulation
+  179  git status
+  180  git add dom-manipulation
+  181  git commit -m "Completed dom-manipulation exercise. - Daniel Tak"
+  182  git status
+  183  git push dom-manipulation
+  184  git push origin dom-manipulation
+  185  git status
+  186  git switch main
+  187  git status
+  188  git pull origin main
+  189  git status
+  190  git pull origin main
+  191  git status
+  192  git branch css-responsive-layout
+  193  git status
+  194  git branch --list
+  195  git switch css-responsive-layout
+  196  git status
+  197  git add css-responsive-layout
+  198  git status
+  199  git commit -m "Completed css-responsive-layout exercise. - Daniel Tak"
+  200  git push origin css-responsive-layout
+  201  git switch main
+  202  git switch css-responsive-layout
+  203  git switch main
+  204  git status
+  205  git pull origin main
+  206  git status
+  207  git pull origin main
+  208  git status
+  209  git branch javascript-and-json
+  210  git branch --list
+  211  git switch javascript-and-json
+  212  git status
+  213  git add javascript-and-json
+  214  git commit -m "Completed javascript-and-json exercise. - Daniel Tak"
+  215  git push origin javascript-and-json 
+  216  git switch main
+  217  git status
+  218  git branch javascript-local-storage
+  219  git branch --list
+  220  git switch javascript-local-storage 
+  221  git status
+  222  git add javascript-local-storage
+  223  git commit -m "javascript-local-storage in progress"
+  224  git status
+  225  git switch main
+  226  git switch javascript-and-json 
+  227  git status
+  228  git add javascript-and-json/
+  229  git commit -m "Completed javascript-and-json exercise. - Daniel Tak"
+  230  git push origin javascript-and-json 
+  231  git status
+  232  git switch main
+  233  git status
+  234  git switch javascript-local-storage 
+  235  git switch javascript-local-storage
+  236  git status
+  237  git switch javascript-local-storage
+  238  git add javascript-local-storage
+  239  git status
+  240  git switch javascript-local-storage
+  241  git commit -m "javascript-local-storage in progress."
+  242  git status
+  243  git add javascript-local-storage
+  244  git status
+  245  git restore --staged javascript-local-storage
+  246  git switch javascript-local-storage
+  247  git switch javascript-local-storage
+  248  rm -rf javascript-local-storage
+  249  git switch javascript-local-storage
+  250  git status
+  251  git add javascript-local-storage
+  252  git commit -m "Completed javascript-local-storage exercise. - Daniel Tak"
+  253  git status
+  254  git push origin javascript-local-storage 
+  255  git status
+  256  git switch main
+  257  git switch javascript-forms
+  258  git status
+  259  git add javascript-forms
+  260  git status
+  261  git commit -m "Completed javascript-forms exercise. - Daniel Tak"
+  262  git switch main
+  263  git switch dom creation
+  264  git switch dom-creation
+  265  git status
+  266  git add dom-creation
+  267  git status
+  268  git commit -m "Completed dom-creation exercise. - Daniel Tak"
+  269  git push dom-creation
+  270  git push origin dom-creation
+  271  git switch main
+  272  git switch dom-event-delegation 
+  273  git switch javascript-view-swapping 
+  274  git status
+  275  git add javascript-view-swapping/
+  276  git commit -m "Completed javascript-view-swapping. - Daniel Tak"
+  277  git status
+  278  git switch main
+  279  git switch javascript-forms
+  280  git status
+  281  git push origin javascript-forms
+  282  git switch dom-creation
+  283  git status
+  284  git add dom-creation
+  285  git status
+  286  git commit -m "Completed dom-creation exercise. - Daniel Tak"
+  287  git status
+  288  git push origin dom-creation
+  289  git status
+  290  git switch main
+  291  git pull origin main
+  292  git switch dom-creation
+  293  git status
+  294  git add dom-creation
+  295  git status
+  296  git commit -m "Completed dom-creation exercise. - Daniel Tak"
+  297  git push origin dom-creation
+  298  git switch main
+  299  git pull origin main
+  300  git switch dom-event-delegation 
+  301  git status
+  302  git add dom-event-delegation
+  303  git status
+  304  git commit -m "Completed dom-event-delegation exercise. - Daniel Tak"
+  305  git switch main
+  306  git switch dom-event-delegation 
+  307  git status
+  308  git push origin dom-event-delegation 
+  309  git switch main
+  310  git status
+  311  git pull origin main
+  312  git status
+  313  git switch javascript-view-swapping 
+  314  git status
+  315  git add javasript-view-swapping
+  316  git add javascript-view-swapping/
+  317  git status
+  318  git commit -m "Completed javascript-view-swapping exercise. - Daniel Tak"
+  319  git status
+  320  git push origin javascript-view-swapping 
+  321  git switch main
+  322  git status
+  323  git pull origin main
+  324  git switch javascript-light-bulb 
+  325  git status
+  326  git add javascript-light-bulb/
+  327  git commit -m "Completed javascript-light-bulb challenge exercise. - Daniel Tak"
+  328  git push origin javascript-light-bulb
+  329  git switch main
+  330  git status
+  331  git pull origin main
+  332  git branch javascript-modal
+  333  git branch --list
+  334  git switch javascript-modal
+  335  git status
+  336  git add javascript-modal
+  337  git status
+  338  git commit -m "Completed javascript-modal exercise. - Daniel Tak"
+  339  git push origin javascript-modal
+  340  git switch main
+  341  git switch javascript-light-bulb
+  342  git status
+  343  git add javascript-light-bulb
+  344  git status
+  345  git commit -m "Deleted unnecessary addEventListener"
+  346  git push origin javascript-light-bulb
+  347  git switch main
+  348  git status
+  349  git pull origin main
+  350  git branch --list
+  351  git switch css-canvas-medical 
+  352  git switch main
+  353  git branch javascript-custom-methods
+  354  git branch --list
+  355  git switch javascript-custom-methods
+  356  git status
+  357  git add javascript-custom-methods/
+  358  git commit -m "Completed javascript-custom-methods exercise. - Daniel Tak"
+  359  git status
+  360  git push origin javascript-custom-methods 
+  361  git switch main
+  362  git branch javascript-this
+  363  git branch --list
+  364  git switch javascript-this
+  365  git status
+  366  git add javascript-this
+  367  git commit -m "Completed javascript-this exercise. - Daniel Tak"
+  368  git push origin javascript-this
+  369  git status
+  370  git switch main
+  371  git pull origin main
+  372  git branch javascript-prototypes
+  373  git status
+  374  git branch --list
+  375  git switch javascript-prototypes 
+  376  git status
+  377  git add javascript-prototypes
+  378  git commit -m "Completed javascript-prototypes exercise. - Daniel Tak"
+  379  git push origin javascript-prototypes 
+  380  git status
+  381  git switch main
+  382  git status
+  383  git status
+  384  git pull origin main
+  385  git branch javascript-constructors
+  386  git branch --list
+  387  git switch javascript-constructors 
+  388  git status
+  389  git add javascript-constructors
+  390  git commit -m "Completed javascript-constructors exercise. - Daniel Tak"
+  391  git push origin javascript-constructors 
+  392  git status
+  393  git switch main
+  394  git branch javascript-bank
+  395  git branch --list
+  396  git switch javascript-bank
+  397  git status
+  398  git add javascript-bank
+  399  git commit-m "Completed javascript-bank exercise. - Daniel Tak"
+  400  git commit -m "Completed javascript-bank exercise. - Daniel Tak"
+  401  git push origin javascript-bank
+  402  git switch main
+  403  git branch javascript-timers
+  404  git status
+  405  git pull origin main
+  406  git status
+  407  git branch --list
+  408  git switch javascript-timers
+  409  git status
+  410  git add javascript-timers
+  411  git commit -m "Completed javascript-timers exercise. - Daniel Tak"
+  412  git push origin javascript-timers 
+  413  git switch main
+  414  git status
+  415  git pull origin main
+  416  git branch javascript-carousel
+  417  git branch --list
+  418  git switch javascript-carousel
+  419  git status
+  420  git add javascript-carousel
+  421  git commit - m "javascript-carousel in progress"
+  422  git commit -m "javascript-carousel in progress"
+  423  git switch main
+  424  git status
+  425  git pull origin main
+  426  git switch css-canvas-medical 
+  427  git switch main
+  428  git restore index.html
+  429  git restore index.html
+  430  git restore index.html
+  431  git status
+  432  git add css-canvas-medical
+  433  git status
+  434  git commit -m "Corrected overlay"
+  435  git push orgin css-canvas-medical 
+  436  git push origin css-canvas-medical 
+  437  git switch main
+  438  git switch javascript-carousel
+  439  git status
+  440  git add javascript-carousel/
+  441  git commit -m "Carousel in progress"
+  442  git status
+  443  git switch main
+  444  git branch http-messages
+  445  git branch --list
+  446  git switch http-messages
+  447  HTTPie
+  448  $HTTPie get https://example.com
+  449  $https httpie.io/hello
+  450  $ http GET https://example.com
+  451  http http://example.com
+  452  http --verbose http://example.com
+  453  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  454  http --body GET https://example.com > http-messages/index.html
+  455  git status
+  456  git add http-messages
+  457  git status
+  458  git add http-messages
+  459  git status
+  460  git commit -m "Completed http-messages exercise. - Daniel Tak"
+  461  git push origin http-messages
+  462  git status
+  463  git status
+  464  git switch main
+  465  git pull origin main
+  466  git branch javascript ajax
+  467  git branch javascript-ajax
+  468  git branch --list
+  469  git switch javascript-ajax
+  470  git status
+  471  git add javascript-ajax
+  472  git commit -m "Completed javascript-ajax exercise. - Daniel Tak"
+  473  git push origin javascript-ajax
+  474  git status
+  475  git switch main
+  476  git status
+  477  git pull origin main
+  478  git switch javascript-carousel 
+  479  GET https://api.goprogram.ai/inspiration
+  480  httpie GET https://api.goprogram.ai/inspiration
+  481  htpps://api.goprogram.ai/inspiration
+  482  http https://api.goprogram.ai/inspiration
+  483  https://zenquotes.io/api/[mode]/[key]?option1=value&option2=value
+  484  http https://api.goprogram.ai/inspiration
+  485  http https://zenquotes.io/api/[mode]/[key]?option1=value&option2=value
+  486  http https://api.goprogram.ai/inspiration/docs/
+  487  git status
+  488  git status
+  489  git add javascript-carousel/
+  490  git status
+  491  git switch main
+  492  git commit -m "javascript-carousel redo"
+  493  git switch main
+  494  git switch javascript-carousel 
+  495  git status
+  496  git add javascript-carousel/index.html
+  497  git status
+  498  git commit m "re-do carousel"
+  499  git commit -m "redo carousel"
+  500  git switch main
+  501  git status
+  502  git add javascript/carousel/index.html
+  503  git add javascript-carousel/index.html
+  504  git add javascript-carousel/main.js
+  505  git commit -m "in progress"
+  506  git switch main
+  507  git pull origin main
+  508  git switch es6-arrow-functions 
+  509  git status
+  510  git switch main
+  511  git status
+  512  git pull origin main
+  513  git branch command-line-basics
+  514  git switch command-line-basics
+  515  cd command-line-basics
+  516  man man
+  517  man man
+  518  man cat
+  519  man man
+  520  man cat
+  521  cat laziness.txt
+  522  cat impatience.txt
+  523  cat hubris.txt
+  524  cat laziness.txt impatience.txt hubris.txt
+  525  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  526  cat three-virtues.txt
+  527  man ls
+  528  man ls
+  529  ls
+  530  ls -a
+  531  ls -F
+  532  ls -aF lfz-staff > lfz-staff/contents.txt
+  533  cat lfz-staff/contents.txt
+  534  man pwd
+  535  pwd
+  536  pwd > i-was-here.txt
+  537  ls
+  538  cat i-was-here.txt
+  539  man echo
+  540  echo 'Hello, World!'
+  541  echo 'Hello, World!' > hello.txt
+  542  man touch
+  543  mkdir
+  544  mkdir parent
+  545  ls parent/
+  546  mkdir -p parent/child/grandchild
+  547  touch .gitkeep
+  548  ls -a
+  549  man mv
+  550  man mv
+  551  mv pokiemans
+  552  mv pokiemans pokemon
+  553  ls
+  554  man rm
+  555  rm lol.txt
+  556  ls
+  557  rm -r kill-me/
+  558  ls kill-me/
+  559  ls
+  560  man cp
+  561  cp and-then.txt no-and-then.txt
+  562  ls
+  563  cat and-then.txt no-and-then.txt
+  564  man history
+  565  history
+  566  history > command-history.txt
