@@ -3,13 +3,9 @@ const data = require('./data.json');
 
 // read a note
 if (process.argv[2] === 'read') {
-  fs.readFile('data.json', 'utf8', (err, data) => {
-    if (err) throw err;
-    const jsonObj = JSON.parse(data, null, 2);
-    for (const property in jsonObj.notes) {
-      console.log(`${property}: ${jsonObj.notes[property]}`);
-    }
-  });
+  for (const property in data.notes) {
+    console.log(`${property}: ${data.notes[property]}`);
+  }
 }
 
 // add a note
