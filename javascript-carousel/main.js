@@ -14,7 +14,7 @@ function rightClick() {
   if (value >= 5) {
     value = 0;
   }
-  view();
+  circlecycle();
 }
 
 function leftClick() {
@@ -22,10 +22,10 @@ function leftClick() {
   if (value < 0) {
     value = 4;
   }
-  view();
+  circlecycle();
 }
 
-function view() {
+function circlecycle() {
   image.src = images[value];
   for (var i = 0; i < images.length; i++) {
     if (i === value) {
@@ -43,16 +43,44 @@ var circleFocus = document.querySelector('.circle-focus');
 circleRow.addEventListener('click', circleClick);
 
 function circleClick(event) {
-  if (event.target.matches('.circle-focus') === false) {
-    return;
+  var id = Number(event.target.getAttribute('id'));
+  if (circleFocus[id] === event.target) {
+    value = id;
+    image.setAttribute('src', images[value]);
   }
-  for (var i = 0; i < images.length; i++) {
-    if (event.target.getAttribute('id') === image[i].getAttribute('id')) {
-      images[i].className = '';
-      circleFocus[i].className = 'fa-solid fa-circle';
-      value = parseInt(event.target.getAttribute('id'));
-    } else {
-      circleFocus[i].className = 'fa-regular fa-circle';
+  clearInterval();
+  circleChange();
+}
+
+function circleChange() {
+  for (var circleChange = 0; circleChange < images.length; circleChange++) {
+    circleFocus[circleChange].setAttribute('class', 'fa-solid fa-circle');
+    if (value === circleChange) {
+      circleFocus[circleChange].setAttribute('class', 'fa-regular fa-circle');
     }
   }
 }
+
+// function circleClick(event) {
+//   for (var i = 0; i < circle.length; i++) {
+//     if (event.target === circle[i]) {
+//       circle[i].className = 'fa-solid fa-circle';
+//       value = (i + 1);
+//     } else {
+//       circle[i].className = 'fa-regular fa-circle';
+//     }
+//   }
+
+//   if (event.target.matches('.circle-focus') === false) {
+//     return;
+//   }
+//   for (var i = 0; i < images.length; i++) {
+//     if (event.target.getAttribute('id') === image[i].getAttribute('id')) {
+//       images[i].className = '';
+//       circleFocus[i].className = 'fa-solid fa-circle';
+//       value = parseInt(event.target.getAttribute('id'));
+//     } else {
+//       circleFocus[i].className = 'fa-regular fa-circle';
+//     }
+//   }
+// }
