@@ -1,4 +1,4 @@
-const express = require('./node_modules/express/lib/express');
+const express = require('express');
 
 const app = express();
 
