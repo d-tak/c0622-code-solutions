@@ -14,7 +14,7 @@ function rightClick() {
   if (value >= 5) {
     value = 0;
   }
-  circlecycle();
+  circleCycle();
 }
 
 function leftClick() {
@@ -22,10 +22,10 @@ function leftClick() {
   if (value < 0) {
     value = 4;
   }
-  circlecycle();
+  circleCycle();
 }
 
-function circlecycle() {
+function circleCycle() {
   image.src = images[value];
   for (var i = 0; i < images.length; i++) {
     if (i === value) {
@@ -39,48 +39,11 @@ function circlecycle() {
 setInterval(rightClick, 3000);
 
 var circleRow = document.querySelector('.circle-row');
-var circleFocus = document.querySelector('.circle-focus');
 circleRow.addEventListener('click', circleClick);
 
 function circleClick(event) {
   var id = Number(event.target.getAttribute('id'));
-  if (circleFocus[id] === event.target) {
-    value = id;
-    image.setAttribute('src', images[value]);
-  }
-  clearInterval();
-  circleChange();
+  value = id;
+
+  circleCycle();
 }
-
-function circleChange() {
-  for (var circleChange = 0; circleChange < images.length; circleChange++) {
-    circleFocus[circleChange].setAttribute('class', 'fa-solid fa-circle');
-    if (value === circleChange) {
-      circleFocus[circleChange].setAttribute('class', 'fa-regular fa-circle');
-    }
-  }
-}
-
-// function circleClick(event) {
-//   for (var i = 0; i < circle.length; i++) {
-//     if (event.target === circle[i]) {
-//       circle[i].className = 'fa-solid fa-circle';
-//       value = (i + 1);
-//     } else {
-//       circle[i].className = 'fa-regular fa-circle';
-//     }
-//   }
-
-//   if (event.target.matches('.circle-focus') === false) {
-//     return;
-//   }
-//   for (var i = 0; i < images.length; i++) {
-//     if (event.target.getAttribute('id') === image[i].getAttribute('id')) {
-//       images[i].className = '';
-//       circleFocus[i].className = 'fa-solid fa-circle';
-//       value = parseInt(event.target.getAttribute('id'));
-//     } else {
-//       circleFocus[i].className = 'fa-regular fa-circle';
-//     }
-//   }
-// }
