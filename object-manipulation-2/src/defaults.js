@@ -11,7 +11,7 @@ IF key is NOT in the target AND IF target is NOT undefined.
 
 function defaults(target, source) {
   for (var key in source) {
-    if (!(key in target) && target !== undefined) {
+    if (!(key in target)) {
       target[key] = source[key];
     }
   }
