@@ -15,12 +15,11 @@ app.get('/api/grades', (req, res) => {
 app.use(express.json());
 
 app.post('/api/grades/', (req, res) => {
-  res.json(req.body);
-  grades[nextId] = req.body;
   req.body.id = nextId;
+  grades[nextId] = req.body;
   nextId++;
   res.status(201);
-  res.send(grades);
+  res.send(req.body);
 });
 
 app.listen(3000, () => {
