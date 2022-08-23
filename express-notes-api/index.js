@@ -37,7 +37,7 @@ app.post('/api/notes', (req, res) => {
     req.body.id = nextId;
     data.notes[nextId] = req.body;
     nextId++;
-    fs.writeFile('data.json', data.toString() + '\n', 'utf-8', err => {
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         console.error(err);
         res.status(500);
@@ -60,13 +60,35 @@ app.delete('/api/notes/:id', (req, res) => {
     res.json({ Error: `cannot find note with id ${deleteById}` });
   } else {
     delete data.notes[deleteById];
-    fs.writeFile('data.json', data.toString() + '\n', 'utf-8', err => {
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         console.error(err);
         res.status(500);
         res.json({ Error: 'An unexpected error occurred.' });
       } else {
         res.sendStatus(204);
+      }
+    });
+  }
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  const replaceById = Number(req.params.id);
+  if (!Number.isInteger(replaceById) || replaceById <= 0) {
+    res.status(400);
+    res.json({ Error: 'id must be a positive integer' });
+  } else if (!data.notes[replaceById] && (!req.body.content)) {
+    res.status(404);
+    res.json({ Error: `cannot find note with id ${replaceById}` });
+  } else {
+    delete data.notes[replaceById];
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
+      if (err) {
+        console.error(err);
+        res.status(500);
+        res.json({ Error: 'An unexpected error occurred.' });
+      } else {
+        res.sendStatus(200);
       }
     });
   }
