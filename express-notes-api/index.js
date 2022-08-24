@@ -3,7 +3,6 @@ const fs = require('fs');
 const data = require('./data.json');
 const app = express();
 let nextId = data.nextId;
-// const notes = {};
 
 app.get('/api/notes', (req, res) => {
   const newArray = [];
@@ -77,18 +76,22 @@ app.put('/api/notes/:id', (req, res) => {
   if (!Number.isInteger(replaceById) || replaceById <= 0) {
     res.status(400);
     res.json({ Error: 'id must be a positive integer' });
-  } else if (!data.notes[replaceById] && (!req.body.content)) {
+  } else if (!req.body.content) {
+    res.status(400);
+    res.json({ Error: 'content field is required' });
+  } else if (data.notes[replaceById] === undefined) {
     res.status(404);
     res.json({ Error: `cannot find note with id ${replaceById}` });
   } else {
-    delete data.notes[replaceById];
+    data.notes[replaceById].content = req.body.content;
     fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         console.error(err);
         res.status(500);
         res.json({ Error: 'An unexpected error occurred.' });
       } else {
-        res.sendStatus(200);
+        res.sendStatus(201);
+        res.json(data.notes[replaceById]);
       }
     });
   }
