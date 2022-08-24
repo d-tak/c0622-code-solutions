@@ -90,7 +90,8 @@ app.put('/api/notes/:id', (req, res) => {
         res.status(500);
         res.json({ Error: 'An unexpected error occurred.' });
       } else {
-        res.sendStatus(200);
+        res.status(200);
+        res.json(data.notes[replaceById]);
       }
     });
   }
