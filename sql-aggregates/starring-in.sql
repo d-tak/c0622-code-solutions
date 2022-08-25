@@ -7,6 +7,6 @@ join    "castMembers" using ("filmId")
 join    "films" using ("filmId")
 join    "actors" using ("actorId")
 
-where   "actorId" = '178'
+where   "firstName" = 'Lisa' and "lastName" = 'Monroe'
 
 group by "genres"."name";
