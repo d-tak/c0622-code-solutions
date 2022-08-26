@@ -93,7 +93,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const score = Number(req.body.score);
   const gradeId = Number(req.params.gradeId);
 
-  if (!name || !course || !score) {
+  if (name === undefined || course === undefined || score === undefined) {
     res.status(400);
     res.json({ error: 'Name, Course, AND Score are REQUIRED fields' });
     return;
