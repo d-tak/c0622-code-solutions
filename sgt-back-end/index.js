@@ -33,7 +33,7 @@ app.get('/api/grades/', (req, res, next) => {
 // POST (inserts a new grade and returns created grade)
 app.use(express.json());
 app.post('/api/grades', (req, res) => {
-  if (!req.body.name || !req.body.course || !req.body.score) {
+  if (req.body.name === undefined || req.body.course === undefined || req.body.score === undefined) {
     res.status(400);
     res.json({ error: 'Name, Course, AND Score are REQUIRED fields' });
     return;
