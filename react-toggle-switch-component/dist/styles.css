@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill {
+  position: relative;
+  display: inline-block;
+  border: solid rgb(70 70 70);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 60%);
+}
+
+.background-off {
+  position: relative;
+  background-color: gainsboro;
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 0.82rem;
+}
+
+.background-on {
+  position: relative;
+  background-color: green;
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 0.82rem;
+}
+
+.slide-off {
+  position: relative;
+  background-color: white;
+  height: 2.57rem;
+  width: 2.3rem;
+  border: solid rgb(70 70 70);
+  border-radius: 0.95rem;
+  right: 0.14rem;
+  transition: background 0.25s;
+}
+
+.slide-on {
+  position: relative;
+  background-color: white;
+  height: 2.57rem;
+  width: 2.3rem;
+  border: solid rgb(70 70 70);
+  border-radius: 0.95rem;
+  left: 3.9rem;
+  transition: background 0.25s;
+}
+
+.status-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+  text-align: center;
+  margin-left: 2rem;
+}
