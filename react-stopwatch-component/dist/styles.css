@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  margin: 2rem;
+}
+
+.circle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: solid black 2px;
+}
+
+.number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  margin-left: 4rem;
+}
+
+.fa-play {
+  font-size: 3rem;
+  margin-left: 6rem;
+}
+
+.fa-pause {
+  font-size: 3rem;
+  margin-left: 6rem;
+}
