@@ -1,7 +1,7 @@
 /* exported isAnagram */
 function isAnagram(firstString, secondString) {
-  var string1 = firstString.replace(' ', '');
-  var string2 = secondString.replace(' ', '');
+  var string1 = firstString.replaceAll(' ', '');
+  var string2 = secondString.replaceAll(' ', '');
   var split1 = string1.split('');
   var split2 = string2.split('');
   var sort1 = split1.sort();
@@ -10,7 +10,7 @@ function isAnagram(firstString, secondString) {
   var join2 = sort2.join('');
 
   for (var i = 0; i < join1.length; i++) {
-    if (join1[i] === join2[i]) {
+    if (join1 === join2) {
       i++;
     } else {
       return false;
