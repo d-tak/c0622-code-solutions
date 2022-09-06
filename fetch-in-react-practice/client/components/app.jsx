@@ -22,7 +22,7 @@ export default class App extends React.Component {
 
     fetch('/api/todos')
       .then(response => response.json())
-      .then(data => this.setState({ todos: data })
+      .then(entry => this.setState({ todos: entry })
       );
   }
 
@@ -47,12 +47,12 @@ export default class App extends React.Component {
     fetch('/api/todos', {
       method: 'POST',
       headers: {
-        'Content-type': 'applicantion/json; charset=UTF-8'
+        'Content-type': 'application/json; charset=UTF-8'
       },
       body: JSON.stringify(newTodo)
     })
       .then(response => response.json())
-      .then(todos => this.setState({ todos: this.state.todos.concat(todos) })
+      .then(entry => this.setState({ todos: this.state.todos.concat(entry) })
       );
   }
 
@@ -78,6 +78,22 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+
+    const index = this.state.todos.findIndex(todo => todo.todoId === todoId);
+    const toggleStatus = { isCompleted: !this.state.todos[index].isCompleted };
+
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(toggleStatus)
+
+    })
+      .then(response => response.json())
+      .then(entry => {
+        const shallowCopy = [...this.state.todos];
+        shallowCopy[index] = entry;
+        this.setState({ todos: shallowCopy });
+      });
   }
 
   render() {
