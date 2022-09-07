@@ -54,6 +54,7 @@ export default class App extends React.Component {
       .then(response => response.json())
       .then(entry => this.setState({ todos: this.state.todos.concat(entry) })
       );
+    // console.log(this.state);
   }
 
   toggleCompleted(todoId) {
