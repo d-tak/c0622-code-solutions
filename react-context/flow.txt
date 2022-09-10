@@ -1,0 +1,271 @@
+**PREAMBLE:**
+
+- When this web application FIRST runs, at the front end, the front end code is served by the backend.
+  - This means, when the user first goes to the website, the browser will send a GET request for the HTML document.
+  - This request occurs in the public/index.html file.
+
+- Here, we can see the files that are associated with the application.
+  - On line 11, we see bootstrap.
+  - On line 14, there is a link to a CSS stylesheet (but there is no styles.css file).
+  - On line 17, there is a <div> with an id of “root” that will allow React to utilize
+    and render any content necessary by the webpack (webpack.config.js) file.
+
+- This is followed by a script tag for the main.js file.
+- All of these files point to resources that may or may not be utilized in the application.
+
+- When the request occurs, the browser then loads all of the components in the HTML file.
+
+- If you’ve run npm run build, this will subsequently create a main.js file
+  (however, it is worth noting that this file does not exist for this application.)
+
+- The reason for this is, in public/dev-middleware.js, this file will provide a main.js,
+  but this is really a bundle of client modules that exist in one, giant string.
+
+- Thus, when the server receives a request for main.js, it simply serves the string from memory.
+- This is basically an interception by the webpack middleware that exists in the dev-middleware.js file.
+
+- Once the dev-middleware runs, the server is able to receive a stream of JavaScript,
+  THIS IS WHEN THE APPLICATION WILL BEGIN TO EXECUTE THE FRONT END CODE.
+
+- The “typical” entry point for one’s front end code will be an index file.
+- For the react-context exercise, this file is located at /pages/index.jsx.
+
+- React, ReactDOM, and App will be included in the bundle.
+- Then, we will access the root div from the index.html document using the querySelector method
+  followed by the creation of a React root and tell React to START the application by mounting it TO the root div.
+
+
+At this point, it is worth discussing the MOUNTING phase of the React Component Lifecycle.
+The application is being mounted on FIRST LOAD.
+
+
+** FIRST LOAD **
+
+- In app.jsx, the application will be called using the new operator, which will execute its constructor,
+  which will then run super(props) – which then establishes the state of the initial load.
+
+- The initial state has a property on it called, “route”.
+
+- The primary role for “App” (on line 11), is to decide which screen to display –
+  this is based on the parseRoute thing on line 17.
+
+- In order to delve deeper in the parseRoute, we can review the file, lib/parse-route.js,
+  and see that it takes a hash route, does something, and returns an object with properties.
+
+- The if statement is checking to see if any of the hash routes begin with “#”.
+  - If they do, they will simply remove them.
+
+- The following line shows a split that occurs at the question mark (?),
+  - the first part being called path, the latter part – query string.
+    - (for more details, refer to a google search bar url.)
+  - The portion subsequent to the question mark is the query string.
+
+- Keys are separated from values using equal (=) signs and Key/Value PAIRS are separated by ampersands (&).
+
+- On line 6, we run new URLSearchParams because strings may have question marks in it,
+  and using string manipulation to find key/value pairs is impractical.
+
+- It is MUCH MORE PRACTICAL to obtain values based on their keys (10:21).
+
+- What parseRoute is doing, is taking an incredibly long url string
+  - (that would be impractical to run string manipulation to find key/value pairs on)
+    and creating a way to return an object with pertinent information that is relevant to deciding which display to show
+
+- If you click on a hash, you will notice the url also updates.
+
+- The portion following the # sign is called the hash fragment.
+  - This was initially added to browsers so that you could add an ID to an element
+  and put an anchor on the page and link the anchor to that element.
+  - This is purely a browser feature and the request (click) does NOT get sent to the server.
+
+- HOWEVER, when the hash changes in the browser, this will trigger an event.
+  - That is the part we are exploiting on the componentDidMount function in the app.jsx file.
+
+** RECAP **
+- Once we parse the route, we have the constructor, this instantiates the application… and then, the application will run render, ONCE.
+
+- After, the componentDidMount will run and we add an addEventListener for FUTURE hashchanges.
+- This is saying, if the hash of the url changes, notify the component and the component will re-parse new hash AND update its setState.
+
+- The path portion is a simple string that we utilize in the application to determine what screen to show.
+
+<19:30 (we good until here)>
+
+
+** RECAP **
+Constructor -> Render -> React fragment and shows the header and calls the page of the render page
+  -> Route -> Path.
+
+
+
+** SERVER CODE **
+- For the react-context code, componentDidMount() has an addEventListener for hashchange instead of fetch,
+  so this componentDidMount will run and we add an addEventListener for any FUTURE hashchanges.
+
+- This is saying, if the hash of the url changes, notify the component and the component will re-parse new hash
+  AND update its setState, as it is handling registrations and authentications… no data… no map… no fetch.
+
+- Note that on the index.js, the app.listen(process.env.PORT, () => { is what is keeping the backend running and waiting for requests.
+
+- The node.js process in the index.js file executes (just once!) and connects to the database server
+
+- The pool has been constructed
+
+- When the request (POST) comes in, the server turns around and communicates with the database.
+- The client makes a connection with the server and sends the process.env.DATABASE_URL to the database.
+
+- EVENTUALLY, the database will reply to the server with the data and the server can communicate
+  with the client by authorizing or not authorizing the request.  (line 13). (23:50)
+
+
+** RECAP **
+- We receive a POST request FROM the client (index.js 27), set up a sql query (lines 36-38),
+  ship the sql query through the database connection, the database send back a result in argon2? (line 43)
+  and then, we send the rows back to the client.
+
+
+
+** USER SIGN UP **
+
+- Once the server has replied, the parseRoute will evaluate for a token within local storage.
+- If the token exists, the application will setState to isAuthorizing as true.
+- If the token is null – indicating that there is no user, it will proceed down the code to handleSignIn.
+  - setState will cause a re-Render (~24 min… react-hashrouting exercise code changes).
+
+
+SO (since there is no user info yet, we are in the Sign Up process)
+
+-  This jumps back to the custom class App and runs the constructor function to check for 3 properties within the state:
+  - user: null – there is no information inputted, yet.
+  - isAuthorizing: true – if a previous token exists, there is no need to re-verify.
+  - route: parseRoute(window.location.hash) – examines the hash route as explained above.
+
+- Following these steps, the file jumps down to the render method.
+  - After running an if statement, the initial return is set to null since nothing has been mounted.
+
+- We jump back into componentDidMount and listen for a “hashchange”
+- If the setState is the same, this verifies that there is an existing token and NO CHANGES need to take place.
+
+- HOWEVER, if there is a change (hashchange), this will cause the setState to change, and the render function will be called again.
+
+- When the this.setState has an isAuthorizing state of false, the components will mount to the page and proceed to move down in the code.
+
+
+- Within the render function:
+  - the AppContext.Provider exists to allow other components to pass through values WITHOUT having to use individual props.
+  - Rather, it takes the values of the object in the const variable contextValue.
+
+  - the AppContextProvider is followed by an empty <React.Fragment> -
+    allowing for Navbar and PageContainer to exists as sibling elements rather than nested children.
+
+  - Following the empty React Fragment, the code renders a react element for Navbar which imports information
+    from the navbar.jsx file in the components folder.
+
+
+- From navbar.jsx
+(Importing data from the navbar.jsx file in the components folder) 
+  - The navbar.jsx file will destructure the user and handleSignOut from this.context,
+    allowing for the return of HTML and CSS like formatting.
+
+
+- From page-container.jsx
+(Importing data from page-container.jsx in the components folder) 
+  - The render function will create a react element, PageContainer that is imported from the page-container file
+    to bring formatting and styles.
+
+
+- The JavaScript element { this.renderPage() } is called as a child of the react element PageContainer.
+  <READ: renderPage method of the this object… (“this” refers to the class App on line 11)>
+
+- This then triggers the renderPage function on line 45 to run which checks the route of the current state by running two if statements.
+  - If the route returns empty, it will send the user to the home.jsx.
+  - If the route returns a user’s sign in or sign up, this will return the react element <Auth />
+    WHICH will direct users to execute the code in /pages/auth.jsx.
+
+
+- From auth.jsx
+Within auth.jsx (beginning on line 7), the render function is called.
+
+  - The auth.jsx file will destructure the user, route, and handleSignIn from this.context.
+  - If a user exists, it will Redirect the client to the user’s window location (their own page)
+    based on the imported file from /components/redirect.jsx.
+
+  - Otherwise, the path of the route will direct users to either sign in OR create an account to get started.
+    (okay, but on the screen, when a non existing username and password are entered, the screen (and its hash)
+    stay the same and do not move rather than prompting for the creation of an account).
+    (okay #2… dev tools shows the 401 error, so I guess that IS doing something).
+
+  - This will render a welcome message (line 24) and direct users to the react element, AuthForm (line 27)
+    which exists in /components/auth-form.jsx
+
+
+- From auth-form.jsx
+When the client is directed to the auth-form component, the constructor function is called
+followed by the super function which gives access to methods and properties of a parent or sibling class.
+
+  - The default state in the AuthForm has two properties, username and password –
+    both with empty strings as that data is still to be determined.
+
+  - After all the above has been evaluated, the client jumps BACK to app.jsx and is able to execute componentDidMount().
+
+  - NOW, since the user knows to create an account to get started
+  - When the user clicks on Sign Up at the top of the page, the hash fragment will change from #sign-in to #sign-up,
+    causing a render function to run AGAIN.
+
+  - This will run the above process again (sparing any copy and paste)
+
+UNTIL
+
+  - In the sign-in process once the handleChange function is executed,
+    and the event.target changes the setState with the input of name (line 16),
+    this will proceed to move down in the code WHEN the user clicks “Register” to trigger the handleSubmit function on line 19.
+
+
+- Within the handleSubmit function:
+  - The preventDefault method of the event is called so that if something unexpected happens,
+    it would not require the user to start the entire process over from the beginning.
+
+- The action (the {route.path} from AuthForm in auth.jsx line 29) is then destructured from this.props.
+
+- In order to use the POST method, the fetch function is called to respond to the JSON that is created by the client’s data entry.
+
+  - IF the action is strictly equal to sign up, this will trigger a hash change (window.location.hash)
+    and direct the client to the sign in page.
+  - OTHERWISE, the client will take the user info and token and direct the client to the handleSignIn.
+
+
+
+** USER SIGN IN **
+
+** RECAP **
+  When the client uses the fetch function in the auth-form.jsx, it will check for existing credentials.
+  Either they do not exist (and the user is sent to the sign in window) OR they do exist when the client verifies the user and token.
+  These two properties MUST match (&& - line 34).
+
+- To do this, the client is pointed to app.post (line 50) in the /server/index.js file.
+- It verifies whether the hashed password and the username match – resulting in the release of the payload and token.
+
+- Otherwise, an error message will be sent to the client indicating an invalid login – meaning the user does not exist,
+  the password is incorrect, the information does not exist, etc.
+
+
+
+** USER CAN STAY SIGNED IN (EVEN IF THEY REFRESH THE PAGE) **
+  If the page is refreshed, back on app.jsx, the page will re-render and start from the top (line 11, class App).
+  It will proceed with the processes above given the routes.  HOWEVER, because the hash fragment doesn’t change,
+  (it did not redirect to the sign-in page), the client will be directed to use the token from index.js
+  and JSON data from local storage.  (react-context-jwt).
+
+- This will re-render the page and retain the existing credentials, allowing the client to remain signed in.
+
+
+
+** USER CAN SIGN OUT **
+  If the client receives a request from the user to SIGN OUT, this will trigger a hashchange and activate a re-render
+  from the app.jsx page.  It will proceed with the above given routes.
+  HOWEVER, because the value of the user will be found to be null in the setState method,
+  the token from local storage (react-context-jwt) will be REMOVED (41) from local storage.
+
+- This will call for another hash change and enable the code to proceed down in the document to re-render the page.
+
+- When the page is re-rendered, because the information will be unknown, it will re-direct to HOME.
