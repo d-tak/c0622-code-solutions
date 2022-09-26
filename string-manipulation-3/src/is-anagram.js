@@ -9,12 +9,9 @@ function isAnagram(firstString, secondString) {
   var join1 = sort1.join('');
   var join2 = sort2.join('');
 
-  for (var i = 0; i < join1.length; i++) {
-    if (join1 === join2) {
-      i++;
-    } else {
-      return false;
-    }
+  if (join1 === join2) {
+    return true;
+  } else {
+    return false;
   }
-  return true;
 }
