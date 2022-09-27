@@ -8,3 +8,9 @@ function countValues(stack) {
   }
   return n;
 }
+
+// let count = 0
+// while(typeof stack.pop() !== 'undefined') {
+//   count ++;
+// }
+// return count;
