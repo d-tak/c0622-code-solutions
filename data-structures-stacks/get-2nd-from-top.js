@@ -10,3 +10,9 @@ function get2ndFromTop(stack) {
     return secondFromTop;
   }
 }
+
+// const top = stack.pop();
+// if (typeof top === 'undefined') return; // GUARD CLAUSE
+// const next = stack.peek();
+// stack.push(top);
+// return next;
