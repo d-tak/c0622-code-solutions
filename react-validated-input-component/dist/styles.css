@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  font-family: sans-serif;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+.red-xmark {
+  color: red;
+  font-size: 1.25rem;
+  margin: 0.25rem;
+}
+
+.green-check {
+  color: green;
+  font-size: 1.25rem;
+  margin: 0;
+}
